@@ -3,3 +3,5 @@ gunicorn
 python-decouple
 dj-database-url
 psycopg[binary]
+requests
+whitenoise
