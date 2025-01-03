@@ -3,7 +3,7 @@ import helpers
 from typing import Any
 from django.core.management.base import BaseCommand
 from django.conf import settings
-
+print('checkpoint 1')
 STATICFILES_VENDOR_DIR = getattr(settings,'STATICFILES_VENDOR_DIR')
 
 VENDOR_STATICFILES ={ 
@@ -11,7 +11,7 @@ VENDOR_STATICFILES ={
         "flowbite.min.js": "https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js",
         "flowbite.min.js.map": "https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js.map",
 }
-
+print('checkpoint 2')
 class Command(BaseCommand):
     def handle(self, *args: any, **options: any):
         self.stdout.write('Downloading Vendor static files')
@@ -20,6 +20,7 @@ class Command(BaseCommand):
         for name, url in VENDOR_STATICFILES.items():
             out_path = STATICFILES_VENDOR_DIR / name
             dl_success = helpers.download_to_local(url,out_path)
+            print('checkpoint 3')
             if dl_success:
                 completed_urls.append(url)
                 #print(name,url,out_path)
