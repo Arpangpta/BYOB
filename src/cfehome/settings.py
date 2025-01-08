@@ -73,11 +73,14 @@ INSTALLED_APPS = [
     "commando",
 
     # third-party-apps
+    "allauth_ui",
     'allauth',
     'allauth.account',
     # Optional -- requires install using `django-allauth[socialaccount]`.
     'allauth.socialaccount',
-    #'allauth.socialaccount.providers.github',    
+    'allauth.socialaccount.providers.github',
+    "widget_tweaks",
+    "slippers",
 ]
 
 MIDDLEWARE = [
