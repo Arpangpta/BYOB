@@ -2,7 +2,7 @@
 src/staticfiles/vendors
 src/local-cdn
 
-
+components.yaml
 .DS_Store
 venv/
 # Byte-compiled / optimized / DLL files
