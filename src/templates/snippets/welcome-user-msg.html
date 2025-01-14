@@ -1,6 +1,7 @@
 <div>
     {% if request.user.is_authenticated %}
-    You are a user 
+    You are a user.<br>
+    User Name = {{ request.user }}
     {% else %} 
     You are not a user 
     {% endif %}
